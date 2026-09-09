@@ -81,6 +81,7 @@ android {
         }
         debug {
             isMinifyEnabled = false
+            shrinkResources = false
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-debug"
             signingConfig = signingConfigs.getByName("debugBuild")
@@ -114,6 +115,13 @@ android {
             useLegacyPackaging = true
             pickFirsts += listOf("**/libbytehook.so")
         }
+        resources {
+            excludes += listOf("resources.properties")
+        }
+    }
+
+    bundle {
+        enableSplit = true
     }
 
     compileOptions {
