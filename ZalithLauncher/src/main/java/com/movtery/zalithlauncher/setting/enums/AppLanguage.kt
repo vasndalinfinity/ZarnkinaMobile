@@ -31,10 +31,6 @@ enum class AppLanguage(
 }
 
 fun applyLanguage(language: AppLanguage) {
-    val appLocale = if (language != AppLanguage.FOLLOW_SYSTEM) {
-        LocaleListCompat.forLanguageTags(language.tag)
-    } else {
-        LocaleListCompat.getEmptyLocaleList()
-    }
+    val appLocale = LocaleListCompat.forLanguageTags(language.tag)
     AppCompatDelegate.setApplicationLocales(appLocale)
 }
