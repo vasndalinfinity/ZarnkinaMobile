@@ -28,6 +28,7 @@ enum class AppLanguage(
     @param:StringRes val textRes: Int
 ) {
     //按语言代码字母顺序排序
+    TURKISH("tr", R.string.language_turkish),
     FOLLOW_SYSTEM("", R.string.generic_follow_system),
     ARABIC("ar", R.string.language_arabic),
     ENGLISH("en", R.string.language_english),
@@ -41,7 +42,6 @@ enum class AppLanguage(
     BRAZILIAN_PORTUGUESE("pt-BR", R.string.language_brazilian_portuguese),
     RUSSIAN("ru", R.string.language_russian),
     THAI("th", R.string.language_thai),
-    TURKISH("tr", R.string.language_turkish),
     UYGHUR("ug", R.string.language_uyghur),
     VIETNAMESE("vi", R.string.language_vietnamese),
     SIMPLIFIED_CHINESE("zh-CN", R.string.language_simplified_chinese),
