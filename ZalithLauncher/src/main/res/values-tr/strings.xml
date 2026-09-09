@@ -661,10 +661,6 @@
     <string name="about_acknowledgements_hmcl_text">%s HMCLden kod barındırır ve uygulamasının bazı kısımlarına atıfta bulunur</string>
     <string name="about_acknowledgements_mcmod_text">%s modların ve mod paketlerinin Basitleştirilmiş Çince çevirilerini MCModdan kullanır</string>
     <string name="about_acknowledgements_bangbang93_text">%s, BMCL API yansıtma kaynağını kullanır</string>
-    <string name="about_acknowledgements_github_community">GitHub Topluluğu</string>
-    <string name="about_acknowledgements_github_community_text">GitHub topluluğundan tüm hata bildiriminde bulunanlar ve katkıda bulunanlar</string>
-    <string name="about_acknowledgements_weblate_community">Weblate Topluluğu</string>
-    <string name="about_acknowledgements_weblate_community_text">Topluluk dil yerelleştirmesine katılan tüm çevirmenler</string>
     <string name="about_plugin_title">Yüklenmiş Eklentiler</string>
     <string name="about_library_title">Üçüncü Parti Kütüphaneler</string>
     <string name="url_wiki_minecraft_game_release">https://minecraft.wiki/w/Java_Edition_%s</string>
