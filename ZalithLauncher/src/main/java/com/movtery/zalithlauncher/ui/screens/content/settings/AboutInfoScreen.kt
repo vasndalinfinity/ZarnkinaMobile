@@ -125,35 +125,7 @@ fun AboutInfoScreen(
 
 
 
-            //额外依赖库板块
-            animatedItem(scope) { yOffset ->
-                ChunkLayout(
-                    modifier = Modifier.offset { IntOffset(x = 0, y = yOffset.roundToPx()) },
-                    title = stringResource(R.string.about_library_title)
-                ) {
-                    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                        libraryData.forEach { info ->
-                            LibraryInfoItem(info = info, openLicense = openLicense, openLink = openLink)
-                        }
-                    }
-                }
-            }
 
-            //已加载插件板块
-            PluginLoader.allPlugins.takeIf { it.isNotEmpty() }?.let { allPlugins ->
-                animatedItem(scope) { yOffset ->
-                    ChunkLayout(
-                        modifier = Modifier.offset { IntOffset(x = 0, y = yOffset.roundToPx()) },
-                        title = stringResource(R.string.about_plugin_title)
-                    ) {
-                        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                            allPlugins.forEach { apkPlugin ->
-                                PluginInfoItem(apkPlugin = apkPlugin)
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }
