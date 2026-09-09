@@ -1201,4 +1201,8 @@
     <string name="settings_title_blur">Bulanıklık Etkisi</string>
     <string name="settings_launcher_background_blur_summary">Arka plan bulanıklık efektini ayarlayın. Bu seçenek önemli ölçüde performans tüketir.</string>
     <string name="settings_launcher_color_theme_style">Palet Sitili</string>
+    <string name="about_acknowledgements_github_community">GitHub</string>
+    <string name="about_acknowledgements_github_community_text">Zarnkina GitHub Deposu</string>
+    <string name="about_acknowledgements_weblate_community">Discord</string>
+    <string name="about_acknowledgements_weblate_community_text">Zarnkina Discord Topluluğu</string>
 </resources>
