@@ -1,0 +1,45 @@
+name: Zarnkina Mobile APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      arch:
+        description: "Target architecture"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - all
+          - arm
+          - arm64
+          - x86
+          - x86_64
+
+jobs:
+  build:
+    name: Build ${{ inputs.arch }} APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: temurin
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build debug APK
+        run: |
+          chmod +x gradlew
+          ./gradlew :app:assembleDebug --no-daemon -Darch=${{ inputs.arch }}
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: zarnkina-mobile-debug-${{ inputs.arch }}
+          path: app/build/outputs/apk/debug/*.apk
