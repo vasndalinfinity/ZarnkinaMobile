@@ -29,3 +29,11 @@ local.properties
 .ampersand/
 
 .vscode/
+
+# Imza anahtarlari ve parolalari depoya asla girmez
+*.jks
+*.keystore
+.keys-backup/
+.tmp-nacl/
+.debug_store_password.txt
+.debug_key_password.txt
